@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+    rel="stylesheet"
+  />
+	</style>
+  <link rel="stylesheet" href="{% static 'styles/home.css' %}">
+  <title>ALY Software</title>
+	<style>
+		.header {
+			background-image: url("{% static 'images/back.jpeg' %}");
+			background-position: center center;
+			background-size: cover;
+			background-repeat: no-repeat;
+		}
+
+		.service {
+			background-image: url("{% static 'images/service.webp' %}");
+			background-position: center center;
+			background-size: cover;
+			background-repeat: no-repeat;
+		}
+
+		.explore__bg{
+			margin-top: 4rem;
+			padding-block: 3rem;
+			display: grid;
+			grid-template-columns: 
+				minmax(1rem, 1fr)
+				minmax(0, var(--max-width))
+				minmax(1rem, 1fr);
+			background-image: url("{% static 'images/explore.jpeg' %}");
+      background-color: rgb(23, 53, 102);
+			background-position: center center;
+			background-size: cover;
+			background-repeat: no-repeat;
+		}
+	</style>
+</head>
+<body>
+  
+  <header class="header">
+    <nav>
+      <div class="nav__bar">
+        <div class="logo">
+          <a href="#"><img src="{% static 'images/logo3.png' %}" alt="logo"></a>
+        </div>
+        <div class="nav__menu__btn" id="menu-btn">
+          <i class="ri-menu-line"></i>
+        </div>
+      </div>
+      <ul class="nav__links" id="nav-links">
+        <li><a href="#home">Ana Sayfa</a></li>
+        <li><a href="#about">Hakkımızda</a></li>
+        <li><a href="#service">Servislerimiz</a></li>
+        <li><a href="#explore">Keşfet</a></li>
+        <li><a href="#contact">İletişim</a></li>
+      </ul>
+      <a href="https://wa.me/905077512299"><button class="btn nav__btn">İletişime Geç</button></a>
+    </nav>
+    <div class="section__container header__container" id="home">
+      <p>Eşsiz - Basit - Dostça</p>
+      <h1>ALY <span>Software</span></h1>
+    </div>
+  </header>
+
+  <section class="section__container about__container" id="about">
+    <div class="about__image">
+      <img src="{% static 'images/about.webp' %}" alt="about">
+    </div>
+    <div class="about__content">
+      <p class="section__subheader">Hakkımızda</p>
+
+      <p class="section__description">Şirketimiz, işletmelere özel internet siteleri ve yazılımlar geliştirerek dijital dünyada fark yaratmalarını sağlıyor. Her projede güvenilir altyapı, kullanıcı dostu arayüzler ve işletme hedeflerinize uygun, ölçeklenebilir çözümler sunmayı amaçlıyoruz. Teknik uzmanlığımızla, işletmenizin ihtiyaçlarına odaklanarak, performans ve verimlilik artıran dijital araçlar geliştiriyoruz. Teknolojiyi işletmenizin büyümesine katkı sağlayacak şekilde dönüştürmeyi hedefliyoruz.</p>
+    </div>
+  </section>
+
+
+  <section class="section__container room__container">
+    <h2 class="section__subheader">Hazır Ürünlerimiz</h2>
+    <div class="room__grid">
+
+      <div class="room__card" data-bungalow="asibungalov" data-bungalow-name="Asi Bungalov">
+        <div class="room__card__image" data-bungalow="1">
+          
+					<img src="{% static 'images/barkod.webp' %}" alt="Barkod Sitesi" class="bungalov-click" data-url="/asibungalov">
+          
+					<!-- <button class="nav-btn prev" data-bungalow="1">&lt;</button> -->
+					<!-- <button class="nav-btn next" data-bungalow="1">&gt;</button> -->
+					<div class="room__card__icons">
+						<span><i class="ri-heart-fill"></i></span>
+						<span><i class="ri-paint-fill"></i></span>
+						<span><i class="ri-shield-star-line"></i></span>
+					</div>
+        </div>
+        <div class="room__card__details">
+          <h4>Barkod Programı</h4>
+          <p>Esnaflara özel <span>stok</span> ve <span>satış</span> takibi.</p>
+          <h5>Daha fazla bilgi için iletişime geçin.</h5>
+          <a href="https://wa.me/905077512299?text=Merhaba.%20Barkod%20sitesi%20hakkında%20bilgi%20almak%20istiyorum%21"><button class="btn">İletişime Geç</button></a>
+        </div>
+      </div>
+  </section>
+
+  <section class="service" id="service">
+    <div class="section__container service__container">
+      <div class="service__content">
+        <p class="section__subheader">SERVİSLERİMİZ</p>
+        <h2 class="section__header">En İyisi İçin Çabalıyoruz</h2>
+        <ul class="service__list">
+          <li>
+            <span><i class="ri-shield-star-line"></i></span>
+            Üst Düzey Güvenlik
+          </li>
+          <li>
+            <span><i class="ri-24-hours-line"></i></span>
+            24 Saat İletişim
+          </li>
+          <li>
+            <span><i class="ri-map-2-line"></i></span>
+            Danışmanlık Hizmeti
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section__container banner__container">
+    <div class="banner__content">
+      <div class="banner__card">
+        <h4>10+</h4>
+        <p>Yazılımcı</p>
+      </div>
+      <div class="banner__card">
+        <h4>150+</h4>
+        <p>Tamamlanmış Proje</p>
+      </div>
+      <div class="banner__card">
+        <h4>200+</h4>
+        <p>Mutlu Müşteri</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="explore" id="explore">
+    <p class="section__subheader">KEŞFET</p>
+    <h2 class="section__header">HABERLER</h2>
+    <div class="explore__bg">
+      <div class="explore__content">
+        <p class="section__description">2 Ekim 2024</p>
+        <h4>Yeni Barkod Programımız İle Sizlerleyiz..</h4>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer" id="contact">
+    <div class="section__container footer__container">
+      <div class="footer__col">
+        <p class="section__description">
+          10'dan fazla yazılımcımız ve ortak çalıştığımız diğer yazılım şirketleriyle siz değerli müşterilerimize, dilediğiniz yazılım programlarını sunmayı hedefliyoruz. Sorularınız ve daha fazlası için bizlerle iletişime geçmeyi unutmayınız!
+        </p>
+        <a href="https://wa.me/905077512299"><button class="btn">İletişime Geç</button></a>
+      </div>
+      <div class="footer__col">
+        <h4>SERVİSLERİMİZ</h4>
+        <ul class="footer__links">
+          <li>Zoom Toplantıları</li>
+          <li>Kişiye Özel Dizaynlar</li>
+          <li>Özel Domain Hizmeti</li>
+          <li>Hosting Hizmeti</li>
+          <li>1 Yıl Ücretsiz Danışmanlık</li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h4>İLETİŞİM</h4>
+        <ul class="footer__links">
+          <li><a href="https://wa.me/905077512299">WhatsApp</a></li>
+        </ul>
+        <ul class="footer__links">
+          <li><a href="tel:+905077512299">Telefon</a></li>
+        </ul>
+        <div class="footer__socials">
+          <a href="https://www.instagram.com//"><img src="{% static 'images/instagram.png' %}" alt="instagram"></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bar">
+      Copyright © 2024 ALY Software. Tüm hakları saklıdır.
+    </div>
+  </footer>
+
+  <script id="bungalowImagePaths" type="application/json">
+    {
+      "asibungalov": [
+        "{% static 'images/asibungalov/main.jpg' %}",
+        "{% static 'images/asibungalov/indoor.jpg' %}",
+        "{% static 'images/asibungalov/outdoor.jpg' %}",
+        "{% static 'images/asibungalov/other.jpg' %}"
+      ],
+      "dogabungalov": [
+        "{% static 'images/dogabungalov/main.jpg' %}",
+        "{% static 'images/dogabungalov/indoor.jpg' %}",
+        "{% static 'images/dogabungalov/outdoor.jpg' %}",
+        "{% static 'images/dogabungalov/other.jpg' %}"
+      ],
+      "yildizbungalov": [
+        "{% static 'images/yildizbungalov/main.jpg' %}",
+        "{% static 'images/yildizbungalov/indoor.jpg' %}",
+        "{% static 'images/yildizbungalov/outdoor.jpg' %}",
+        "{% static 'images/yildizbungalov/other.jpg' %}"
+      ]
+    }
+  </script>
+  
+  
+  
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Room card içindeki fotoğrafları ve butonları hedef al
+      document.querySelectorAll('.room__card').forEach(function(card) {
+        const prevBtn = card.querySelector('.nav-btn.prev');
+        const nextBtn = card.querySelector('.nav-btn.next');
+        const image = card.querySelector('.room__card__image img');
+        
+        if (prevBtn && nextBtn && image) {
+          const images = [
+            image.src.replace(/main\.jpg$/, 'main.jpg'),
+            image.src.replace(/main\.jpg$/, 'indoor.jpg'),
+            image.src.replace(/main\.jpg$/, 'outdoor.jpg'),
+            image.src.replace(/main\.jpg$/, 'other.jpg')
+          ];
+          
+          let currentImageIndex = images.indexOf(image.src);
+          
+          prevBtn.addEventListener('click', function() {
+            currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
+            image.src = images[currentImageIndex];
+          });
+          
+          nextBtn.addEventListener('click', function() {
+            currentImageIndex = (currentImageIndex + 1) % images.length;
+            image.src = images[currentImageIndex];
+          });
+        }
+      });
+    });
+  </script>
+  
+  
+  
+  
+
+  
+	<script src="https://unpkg.com/scrollreveal"></script>
+
+  <script>
+    const menuBtn = document.getElementById("menu-btn");
+    const navLinks = document.getElementById("nav-links");
+    const menuBtnIcon = menuBtn.querySelector("i");
+
+    menuBtn.addEventListener("click", ()=>{
+      navLinks.classList.toggle("open");
+
+      const isOpen = navLinks.classList.contains("open");
+      menuBtnIcon.setAttribute("class", isOpen ? "ri-close-line":"ri-menu-line");
+    });
+
+    navLinks.addEventListener("click", () => {
+      navLinks.classList.remove("open");
+      menuBtnIcon.setAttribute("class", "ri-menu-line");
+    });
+
+    const scrollRevealOption = {
+      distance: "50px",
+      origin: "bottom",
+      duration: 1000,
+    };
+
+    //header container
+    ScrollReveal().reveal(".header__container p", {
+      ...scrollRevealOption,
+    });
+
+    ScrollReveal().reveal(".header__container h1", {
+      ...scrollRevealOption,
+      delay: 500,
+    });
+
+
+    //about container
+    ScrollReveal().reveal(".about__image img" , {
+      ...scrollRevealOption,
+      origin: "left",
+    });
+
+    ScrollReveal().reveal(".about__content .section__subheader", {
+      ...scrollRevealOption,
+      delay: 500,
+    });
+
+    ScrollReveal().reveal(".about__content .section__header", {
+      ...scrollRevealOption,
+      delay: 1000,
+    });
+
+    ScrollReveal().reveal(".about__content .section__description", {
+      ...scrollRevealOption,
+      delay: 1500,
+    });
+
+    ScrollReveal().reveal(".about__btn", {
+      ...scrollRevealOption,
+      delay: 2000,
+    });
+
+    // room container
+    ScrollReveal().reveal(".room__card",{
+      ...scrollRevealOption,
+      interval: 500,
+    });
+
+    // service container
+    ScrollReveal().reveal(".service__list li",{
+      ...scrollRevealOption,
+      interval: 500,
+      origin: "right",
+    });
+  </script>
+</body>
+</html>

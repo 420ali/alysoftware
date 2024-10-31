@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  {% load static %}
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{% static 'styles/style.css' %}">
+  <title>ALY Software</title>
+  
+  <style>
+    .header {
+			background-image: url("{% static 'images/header.jpg' %}");
+			background-position: center center;
+			background-size: cover;
+			background-repeat: no-repeat;
+      height: 200px;
+		}
+  </style>
+</head>
+<body>
+  <header class="header">
+    <nav>
+      <div class="nav__bar">
+        <div class="logo">
+          <a href="#"><img src="{% static 'images/logo1.png' %}" alt="logo"></a>
+        </div>
+        <div class="nav__menu__btn" id="menu-btn">
+          <i class="ri-menu-line"></i>
+        </div>
+      </div>
+      <ul class="nav__links" id="nav-links">
+        <li><a href="{% url 'home' %}">Ana Sayfa</a></li>
+        <li><a href="#contact">İletişim</a></li>
+      </ul>
+      <a href="https://wa.me/905468309631"><button class="btn nav__btn">İletişime Geç</button></a>
+    </nav>
+  </header>
+
+  <main>
+    {% block content %}
+    {% endblock %}
+  </main>
+
+  <footer class="footer" id="contact">
+    <div class="section__container footer__container">
+      <div class="footer__col">
+        <div class="logo">
+          <a href="#home"><img src="{% static 'images/logo1.png' %}" alt="logo"></a>
+        </div>
+        <p class="section__description">
+					Her gün detaylı bir şekilde temizlenen villalarımız, aşçılarımızın özenle hazırladığı kahvaltılarımız ve en önemlisi harika bir tatil deneyimi için lütfen bizimle iletişime geçin!
+        </p>
+        <a href="https://wa.me/905468309631"><button class="btn">Rezervasyon Yap!</button></a>
+      </div>
+      <div class="footer__col">
+        <h4>Dolandırıcılara Dikkat!</h4>
+				<p>Kendi numaramız olan <span>6410</span> numarasını aşağıdaki "Türsab" yazısına bastıktan sonra "Belge No" kısmına yapıştırıp doğruluğumuzu görebilirsiniz. Lütfen Türsab numarası olmayan sayfalara inanmayınız.</p>
+        <ul class="footer__links">
+          <li><a href="https://online.tursab.org.tr/publicpages/embedded/agencysearch/">Türsab</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h4>SERVİSLERİMİZ</h4>
+        <ul class="footer__links">
+          <li>Havalimanı Transferi</li>
+          <li>Yerleşme</li>
+          <li>Yemek Servisi</li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h4>İLETİŞİM</h4>
+        <ul class="footer__links">
+          <li><a href="https://wa.me/905468309631">WhatsApp</a></li>
+        </ul>
+        <div class="footer__socials">
+          <a href="https://www.instagram.com/adr_sakarya_travel/"><img src="{% static 'images/instagram.png' %}" alt="instagram"></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bar">
+      Copyright © 2024 "Adr Sakarya Travel". Tüm hakları saklıdır.
+    </div>
+  </footer>
+  
+  <script src="https://unpkg.com/scrollreveal"></script>
+
+  </script>
+</body>
+</html>

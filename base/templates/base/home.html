@@ -1,0 +1,94 @@
+{% block content %}
+<!DOCTYPE html>
+{% load static %}
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ALY Software</title>
+  <link rel="stylesheet" href="{% static 'styles/home.css' %}">
+
+  <style>
+    #home{
+      background-image: url("{% static 'images/pexels-photo-546819.jpeg' %}");
+      background-position: center; /* Ortalar */
+      background-size: cover; /* Resmi sayfaya sığacak şekilde kırp ve boyutlandır */
+      background-repeat: no-repeat; /* Tekrar etmesini engeller */
+      height: 100vh; /* Yüksekliği tam sayfa yap */
+      margin: 0;
+    }
+  </style>
+
+</head>
+<body>
+  <!-- Navbar -->
+  <nav>
+    <div class="navbar-container">
+      <div class="logo">
+        <img src="logo.png" alt="Logo"/>
+      </div>
+      <ul>
+        <li><a href="#home">Ana Sayfa</a></li>
+        <li><a href="#about">Hakkımızda</a></li>
+        <li><a href="#products">Ürünlerimiz</a></li>
+        <li><a href="#contact">İletişim</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Sections -->
+  <section id="home">
+    <h1>ALY Software</h1>
+    <p>Yazılım çözümleriniz için buradayız.</p>
+  </section>
+
+  <hr>
+
+  <section id="about">
+    <h2>Hakkımızda</h2>
+    <div class="content">
+      <p>Biz bir yazılım şirketiyiz ve profesyonel çözümler sunuyoruz.</p>
+      <img src="" alt="">
+    </div>
+  </section>
+
+  <hr>
+
+  <section id="products">
+    <h2>Ürünlerimiz</h2>
+    <div class="product">
+      <h3>Barkod Sitesi</h3>
+      <p>Barkod ve satış işlemlerinizi yönetmenize yardımcı olacak bir sistem.</p>
+    </div>
+  </section>
+
+  <hr>
+
+  <section id="contact">
+    <h2>İletişim</h2>
+    <p>Bize ulaşın: info@firmamiz.com</p>
+  </section>
+
+  <footer>
+    <p>&copy; 2024 ALY Software. Tüm hakları saklıdır.</p>
+  </footer>
+
+
+  <script>
+    document.querySelectorAll('nav ul li a').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const targetSection = document.querySelector(this.getAttribute('href'));
+        window.scrollTo({
+          top: targetSection.offsetTop - 60, // Navbar yüksekliği kadar boşluk bırak
+          behavior: 'smooth'
+        });
+      });
+    });
+  </script>
+</body>
+</html>
+
+
+
+{% endblock %}
