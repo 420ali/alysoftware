@@ -1,1 +1,1 @@
-web: python3 manage.py migrate --noinput && python3 manage.py collectstatic --noinput && gunicorn alysoftware.wsgi
+web: python3 manage.py migrate --noinput && python3 manage.py collectstatic --noinput && gunicorn alysoftware.wsgi:application
