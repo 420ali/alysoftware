@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useLocale } from "@/contexts/LocaleContext";
 import { localeFlags, type Locale } from "@/i18n/config";
 
@@ -14,6 +15,10 @@ function setLocaleCookie(locale: Locale) {
 
 export default function LanguageSwitcher() {
   const { locale: currentLocale } = useLocale();
+  const pathname = usePathname();
+  const pathWithoutLocale = pathname?.replace(/^\/(tr|en)/, "") || "";
+  const hrefForLocale = (locale: Locale) =>
+    `/${locale}${pathWithoutLocale || ""}`;
 
   return (
     <div
@@ -24,7 +29,8 @@ export default function LanguageSwitcher() {
       {(["tr", "en"] as const).map((locale) => (
         <Link
           key={locale}
-          href={`/${locale}`}
+          href={hrefForLocale(locale)}
+          scroll={false}
           onClick={() => setLocaleCookie(locale)}
           title={locale === "tr" ? "Türkçe" : "English"}
           aria-label={locale === "tr" ? "Switch to Turkish" : "Switch to English"}

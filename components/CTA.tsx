@@ -3,7 +3,7 @@
 import { useLocale } from "@/contexts/LocaleContext";
 
 export default function CTA() {
-  const { t } = useLocale();
+  const { t, locale } = useLocale();
 
   return (
     <section id="demo" className="py-20 sm:py-28 md:py-36 lg:py-40">
@@ -12,7 +12,7 @@ export default function CTA() {
           {t("cta.headline")}
         </h2>
         <a
-          href="#demo"
+          href={`/${locale}/contact`}
           className="mt-10 inline-flex items-center justify-center rounded-full bg-[var(--foreground)] text-[var(--background)] px-10 py-4 text-base font-medium hover:opacity-90 transition-opacity"
         >
           {t("cta.button")}

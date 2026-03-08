@@ -3,7 +3,7 @@
 import { useLocale } from "@/contexts/LocaleContext";
 
 export default function Hero() {
-  const { t } = useLocale();
+  const { t, locale } = useLocale();
 
   return (
     <section className="relative pt-28 sm:pt-32 pb-20 sm:pb-24 md:pt-40 md:pb-32 overflow-hidden">
@@ -22,9 +22,12 @@ export default function Hero() {
           {t("hero.subtitle")}
         </p>
 
-        <div className="mt-10 md:mt-14 flex flex-col sm:flex-row items-center justify-center gap-4 animate-fade-in-up [animation-delay:0.3s] opacity-0 [animation-fill-mode:forwards]">
+        <div
+          className="mt-10 md:mt-14 flex flex-col sm:flex-row items-center justify-center gap-4 animate-fade-in-up [animation-delay:0.3s] opacity-0 [animation-fill-mode:forwards]"
+          data-hero-demo
+        >
           <a
-            href="#demo"
+            href={`/${locale}/contact`}
             className="w-full sm:w-auto inline-flex items-center justify-center rounded-full bg-[var(--foreground)] text-[var(--background)] px-8 py-4 text-base font-medium hover:opacity-90 transition-opacity"
           >
             {t("hero.requestDemo")}

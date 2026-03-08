@@ -1,9 +1,10 @@
 "use client";
 
+import Link from "next/link";
 import { useLocale } from "@/contexts/LocaleContext";
 
 export default function Footer() {
-  const { t } = useLocale();
+  const { t, locale } = useLocale();
 
   const productLinks = [
     { labelKey: "footer.product", href: "#products" },
@@ -12,27 +13,20 @@ export default function Footer() {
   ];
 
   const companyLinks = [
-    { labelKey: "footer.about", href: "#" },
-    { labelKey: "footer.careers", href: "#" },
-    { labelKey: "footer.contact", href: "#" },
-  ];
-
-  const resourcesLinks = [
-    { labelKey: "footer.documentation", href: "#" },
-    { labelKey: "footer.blog", href: "#" },
-    { labelKey: "footer.support", href: "#" },
+    { labelKey: "footer.about", href: `/${locale}/about` },
+    { labelKey: "footer.contact", href: `/${locale}/contact` },
   ];
 
   const legalLinks = [
-    { labelKey: "footer.privacy", href: "#" },
-    { labelKey: "footer.terms", href: "#" },
+    { labelKey: "footer.privacy", href: `/${locale}/privacy` },
+    { labelKey: "footer.terms", href: `/${locale}/terms` },
   ];
 
   return (
     <footer id="company" className="border-t border-black/10 py-16 md:py-20">
       <div className="mx-auto max-w-content px-6">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-10 md:gap-12">
-          <div>
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-10 md:gap-12">
+          <div className="text-center">
             <h4 className="text-sm font-semibold text-[var(--foreground)] mb-4">
               {t("footer.product")}
             </h4>
@@ -49,7 +43,7 @@ export default function Footer() {
               ))}
             </ul>
           </div>
-          <div>
+          <div className="text-center">
             <h4 className="text-sm font-semibold text-[var(--foreground)] mb-4">
               {t("footer.company")}
             </h4>
@@ -66,24 +60,7 @@ export default function Footer() {
               ))}
             </ul>
           </div>
-          <div>
-            <h4 className="text-sm font-semibold text-[var(--foreground)] mb-4">
-              {t("footer.resources")}
-            </h4>
-            <ul className="space-y-3">
-              {resourcesLinks.map((link) => (
-                <li key={link.labelKey}>
-                  <a
-                    href={link.href}
-                    className="text-sm text-[var(--muted)] hover:text-[var(--foreground)] transition-colors"
-                  >
-                    {t(link.labelKey)}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
-          <div>
+          <div className="text-center">
             <h4 className="text-sm font-semibold text-[var(--foreground)] mb-4">
               {t("footer.legal")}
             </h4>

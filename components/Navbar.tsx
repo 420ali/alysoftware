@@ -1,12 +1,20 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useLocale } from "@/contexts/LocaleContext";
 import LanguageSwitcher from "./LanguageSwitcher";
 
 export default function Navbar() {
-  const { t } = useLocale();
+  const { t, locale } = useLocale();
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [heroDemoInView, setHeroDemoInView] = useState(true);
+  const pathname = usePathname();
+  const pathWithoutLocale = pathname?.replace(/^\/(tr|en)/, "") || "";
+  const isHome = pathWithoutLocale === "" || pathWithoutLocale === "/";
+  const homeHref = (hash: string) => (isHome ? hash : `/${locale}${hash}`);
+  const showNavDemo = !isHome || !heroDemoInView;
 
   const navLinks = [
     { labelKey: "nav.product", href: "#products" },
@@ -23,21 +31,35 @@ export default function Navbar() {
     return () => window.removeEventListener("keydown", onKeyDown);
   }, []);
 
+  useEffect(() => {
+    if (!isHome) return;
+    const el = document.querySelector("[data-hero-demo]");
+    if (!el) return;
+    const observer = new IntersectionObserver(
+      ([entry]) => setHeroDemoInView(entry.isIntersecting),
+      { threshold: 0, rootMargin: "0px" }
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, [isHome]);
+
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-[var(--background)]/80 backdrop-blur-xl border-b border-black/5">
-      <nav className="mx-auto max-w-content px-6 py-4 flex items-center justify-between">
-        <a
-          href="#"
-          className="text-xl font-semibold tracking-tight text-[var(--foreground)]"
-        >
-          Aly
-        </a>
+      <nav className="mx-auto max-w-content px-6 py-4 flex items-center">
+        <div className="flex flex-1 items-center justify-start min-w-0">
+          <Link
+            href={`/${locale}`}
+            className="text-xl font-semibold tracking-tight text-[var(--foreground)]"
+          >
+            Aly
+          </Link>
+        </div>
 
-        <ul className="hidden md:flex items-center gap-10">
+        <ul className="hidden md:flex items-center justify-center gap-8 md:gap-10 flex-1 min-w-0">
           {navLinks.map((link) => (
             <li key={link.labelKey}>
               <a
-                href={link.href}
+                href={homeHref(link.href)}
                 className="text-sm text-[var(--muted)] hover:text-[var(--foreground)] transition-colors"
               >
                 {t(link.labelKey)}
@@ -46,15 +68,16 @@ export default function Navbar() {
           ))}
         </ul>
 
-        <div className="flex items-center gap-3 sm:gap-4">
+        <div className="flex flex-1 items-center justify-end gap-8 md:gap-10 min-w-0">
           <LanguageSwitcher />
           <a
-            href="#demo"
-            className="hidden md:inline-flex items-center justify-center rounded-full bg-[var(--foreground)] text-[var(--background)] px-5 py-2.5 text-sm font-medium hover:opacity-90 transition-opacity"
+            href={`/${locale}/contact`}
+            className={`hidden md:inline-flex items-center justify-center rounded-full bg-[var(--foreground)] text-[var(--background)] px-5 py-2.5 text-sm font-medium hover:opacity-90 transition-opacity duration-300 ${
+              showNavDemo ? "opacity-100" : "opacity-0 pointer-events-none"
+            }`}
           >
             {t("nav.requestDemo")}
           </a>
-
           <button
             type="button"
             aria-label="Toggle menu"
@@ -101,7 +124,7 @@ export default function Navbar() {
             {navLinks.map((link) => (
               <li key={link.labelKey}>
                 <a
-                  href={link.href}
+                  href={homeHref(link.href)}
                   className="text-lg text-[var(--foreground)]"
                   onClick={() => setMobileOpen(false)}
                 >
@@ -112,7 +135,7 @@ export default function Navbar() {
             <li className="flex flex-col gap-3">
               <LanguageSwitcher />
               <a
-                href="#demo"
+                href={`/${locale}/contact`}
                 className="inline-flex items-center justify-center rounded-full bg-[var(--foreground)] text-[var(--background)] px-5 py-3 text-sm font-medium w-full"
                 onClick={() => setMobileOpen(false)}
               >
