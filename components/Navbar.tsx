@@ -68,12 +68,14 @@ export default function Navbar() {
           ))}
         </ul>
 
-        <div className="flex flex-1 items-center justify-end gap-8 md:gap-10 min-w-0">
+        <div className="flex flex-1 items-center justify-end gap-4 md:gap-10 min-w-0">
           <LanguageSwitcher />
           <a
             href={`/${locale}/contact`}
-            className={`hidden md:inline-flex items-center justify-center rounded-full bg-[var(--foreground)] text-[var(--background)] px-5 py-2.5 text-sm font-medium hover:opacity-90 transition-opacity duration-300 ${
-              showNavDemo ? "opacity-100" : "opacity-0 pointer-events-none"
+            className={`inline-flex items-center justify-center rounded-lg bg-[var(--foreground)] text-[var(--background)] px-4 py-2.5 md:px-3 md:py-2 text-sm font-medium hover:opacity-90 overflow-hidden whitespace-nowrap transition-all duration-500 ease-out min-h-[44px] ${
+              showNavDemo
+                ? "max-w-[200px] min-w-[140px] opacity-100 delay-150"
+                : "max-w-0 min-w-0 opacity-0 pointer-events-none md:max-w-[180px] md:min-w-0 md:opacity-0"
             }`}
           >
             {t("nav.requestDemo")}
@@ -132,16 +134,6 @@ export default function Navbar() {
                 </a>
               </li>
             ))}
-            <li className="flex flex-col gap-3">
-              <LanguageSwitcher />
-              <a
-                href={`/${locale}/contact`}
-                className="inline-flex items-center justify-center rounded-full bg-[var(--foreground)] text-[var(--background)] px-5 py-3 text-sm font-medium w-full"
-                onClick={() => setMobileOpen(false)}
-              >
-                {t("nav.requestDemo")}
-              </a>
-            </li>
           </ul>
         </div>
       )}
