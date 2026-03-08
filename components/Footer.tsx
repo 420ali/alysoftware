@@ -1,43 +1,49 @@
-const productLinks = [
-  { label: "Product", href: "#products" },
-  { label: "Features", href: "#features" },
-  { label: "Integrations", href: "#integrations" },
-];
+"use client";
 
-const companyLinks = [
-  { label: "About", href: "#" },
-  { label: "Careers", href: "#" },
-  { label: "Contact", href: "#" },
-];
-
-const resourcesLinks = [
-  { label: "Documentation", href: "#" },
-  { label: "Blog", href: "#" },
-  { label: "Support", href: "#" },
-];
-
-const legalLinks = [
-  { label: "Privacy", href: "#" },
-  { label: "Terms", href: "#" },
-];
+import { useLocale } from "@/contexts/LocaleContext";
 
 export default function Footer() {
+  const { t } = useLocale();
+
+  const productLinks = [
+    { labelKey: "footer.product", href: "#products" },
+    { labelKey: "footer.features", href: "#features" },
+    { labelKey: "footer.integrations", href: "#integrations" },
+  ];
+
+  const companyLinks = [
+    { labelKey: "footer.about", href: "#" },
+    { labelKey: "footer.careers", href: "#" },
+    { labelKey: "footer.contact", href: "#" },
+  ];
+
+  const resourcesLinks = [
+    { labelKey: "footer.documentation", href: "#" },
+    { labelKey: "footer.blog", href: "#" },
+    { labelKey: "footer.support", href: "#" },
+  ];
+
+  const legalLinks = [
+    { labelKey: "footer.privacy", href: "#" },
+    { labelKey: "footer.terms", href: "#" },
+  ];
+
   return (
     <footer id="company" className="border-t border-black/10 py-16 md:py-20">
       <div className="mx-auto max-w-content px-6">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-10 md:gap-12">
           <div>
             <h4 className="text-sm font-semibold text-[var(--foreground)] mb-4">
-              Product
+              {t("footer.product")}
             </h4>
             <ul className="space-y-3">
               {productLinks.map((link) => (
-                <li key={link.label}>
+                <li key={link.labelKey}>
                   <a
                     href={link.href}
                     className="text-sm text-[var(--muted)] hover:text-[var(--foreground)] transition-colors"
                   >
-                    {link.label}
+                    {t(link.labelKey)}
                   </a>
                 </li>
               ))}
@@ -45,16 +51,16 @@ export default function Footer() {
           </div>
           <div>
             <h4 className="text-sm font-semibold text-[var(--foreground)] mb-4">
-              Company
+              {t("footer.company")}
             </h4>
             <ul className="space-y-3">
               {companyLinks.map((link) => (
-                <li key={link.label}>
+                <li key={link.labelKey}>
                   <a
                     href={link.href}
                     className="text-sm text-[var(--muted)] hover:text-[var(--foreground)] transition-colors"
                   >
-                    {link.label}
+                    {t(link.labelKey)}
                   </a>
                 </li>
               ))}
@@ -62,16 +68,16 @@ export default function Footer() {
           </div>
           <div>
             <h4 className="text-sm font-semibold text-[var(--foreground)] mb-4">
-              Resources
+              {t("footer.resources")}
             </h4>
             <ul className="space-y-3">
               {resourcesLinks.map((link) => (
-                <li key={link.label}>
+                <li key={link.labelKey}>
                   <a
                     href={link.href}
                     className="text-sm text-[var(--muted)] hover:text-[var(--foreground)] transition-colors"
                   >
-                    {link.label}
+                    {t(link.labelKey)}
                   </a>
                 </li>
               ))}
@@ -79,16 +85,16 @@ export default function Footer() {
           </div>
           <div>
             <h4 className="text-sm font-semibold text-[var(--foreground)] mb-4">
-              Legal
+              {t("footer.legal")}
             </h4>
             <ul className="space-y-3">
               {legalLinks.map((link) => (
-                <li key={link.label}>
+                <li key={link.labelKey}>
                   <a
                     href={link.href}
                     className="text-sm text-[var(--muted)] hover:text-[var(--foreground)] transition-colors"
                   >
-                    {link.label}
+                    {t(link.labelKey)}
                   </a>
                 </li>
               ))}
@@ -104,7 +110,7 @@ export default function Footer() {
             Aly
           </a>
           <p className="text-sm text-[var(--muted)]">
-            © {new Date().getFullYear()} Aly Software. All rights reserved.
+            © {new Date().getFullYear()} {t("footer.copyright")}
           </p>
         </div>
       </div>

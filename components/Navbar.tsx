@@ -1,16 +1,19 @@
 "use client";
 
 import { useState, useEffect } from "react";
-
-const navLinks = [
-  { label: "Product", href: "#products" },
-  { label: "Features", href: "#features" },
-  { label: "Integrations", href: "#integrations" },
-  { label: "Company", href: "#company" },
-];
+import { useLocale } from "@/contexts/LocaleContext";
+import LanguageSwitcher from "./LanguageSwitcher";
 
 export default function Navbar() {
+  const { t } = useLocale();
   const [mobileOpen, setMobileOpen] = useState(false);
+
+  const navLinks = [
+    { labelKey: "nav.product", href: "#products" },
+    { labelKey: "nav.features", href: "#features" },
+    { labelKey: "nav.integrations", href: "#integrations" },
+    { labelKey: "nav.company", href: "#company" },
+  ];
 
   useEffect(() => {
     const onKeyDown = (e: KeyboardEvent) => {
@@ -32,23 +35,24 @@ export default function Navbar() {
 
         <ul className="hidden md:flex items-center gap-10">
           {navLinks.map((link) => (
-            <li key={link.label}>
+            <li key={link.labelKey}>
               <a
                 href={link.href}
                 className="text-sm text-[var(--muted)] hover:text-[var(--foreground)] transition-colors"
               >
-                {link.label}
+                {t(link.labelKey)}
               </a>
             </li>
           ))}
         </ul>
 
-        <div className="flex items-center gap-4">
+        <div className="flex items-center gap-3 sm:gap-4">
+          <LanguageSwitcher />
           <a
             href="#demo"
             className="hidden md:inline-flex items-center justify-center rounded-full bg-[var(--foreground)] text-[var(--background)] px-5 py-2.5 text-sm font-medium hover:opacity-90 transition-opacity"
           >
-            Request Demo
+            {t("nav.requestDemo")}
           </a>
 
           <button
@@ -95,23 +99,24 @@ export default function Navbar() {
         >
           <ul className="flex flex-col gap-6">
             {navLinks.map((link) => (
-              <li key={link.label}>
+              <li key={link.labelKey}>
                 <a
                   href={link.href}
                   className="text-lg text-[var(--foreground)]"
                   onClick={() => setMobileOpen(false)}
                 >
-                  {link.label}
+                  {t(link.labelKey)}
                 </a>
               </li>
             ))}
-            <li>
+            <li className="flex flex-col gap-3">
+              <LanguageSwitcher />
               <a
                 href="#demo"
                 className="inline-flex items-center justify-center rounded-full bg-[var(--foreground)] text-[var(--background)] px-5 py-3 text-sm font-medium w-full"
                 onClick={() => setMobileOpen(false)}
               >
-                Request Demo
+                {t("nav.requestDemo")}
               </a>
             </li>
           </ul>

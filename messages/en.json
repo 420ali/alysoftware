@@ -1,0 +1,88 @@
+{
+  "nav": {
+    "product": "Product",
+    "features": "Features",
+    "integrations": "Integrations",
+    "company": "Company",
+    "requestDemo": "Request Demo"
+  },
+  "hero": {
+    "titleLine1": "The Operating System for",
+    "titleLine2": " Modern Business Operations",
+    "subtitle": "Connect systems. Automate workflows. Scale faster.",
+    "requestDemo": "Request Demo",
+    "seeHowItWorks": "See How It Works"
+  },
+  "problem": {
+    "item1Title": "Fragmented tools",
+    "item1Desc": "Data scattered across dozens of apps. No single source of truth.",
+    "item2Title": "Rigid legacy systems",
+    "item2Desc": "Monolithic systems that can't adapt to how you work today.",
+    "item3Title": "Manual work",
+    "item3Desc": "Repetitive tasks that slow growth and burn out teams."
+  },
+  "products": {
+    "title": "Products",
+    "crmName": "CRM",
+    "crmDesc": "Relationships and pipeline in one place. One source of truth for every customer.",
+    "salesName": "Sales",
+    "salesDesc": "Deals, quotes, and forecasting. Close more with less manual work.",
+    "billingName": "Billing",
+    "billingDesc": "Invoicing and revenue recognition. Get paid faster, report accurately.",
+    "automationName": "Automation",
+    "automationDesc": "Workflows that run without you. Connect steps and remove bottlenecks.",
+    "integrationsName": "Integrations",
+    "integrationsDesc": "Connect any system, any API. Your stack stays in sync.",
+    "analyticsName": "Analytics",
+    "analyticsDesc": "Single source of truth across ops. See what matters in one place."
+  },
+  "architecture": {
+    "title": "How it works",
+    "subtitle": "Three steps to one unified operations platform.",
+    "step1Title": "Connect",
+    "step1Desc": "Bring your existing systems and data into one place.",
+    "step2Title": "Unify",
+    "step2Desc": "One operations layer. No more silos or duplicate data.",
+    "step3Title": "Automate",
+    "step3Desc": "Workflows that scale with you and run without manual steps.",
+    "diagramLegacy": "ERP · CRM · Legacy",
+    "diagramAly": "Aly",
+    "diagramUnified": "One unified layer"
+  },
+  "benefits": {
+    "title": "Key benefits",
+    "item1": "One platform for CRM, sales, billing, and operations",
+    "item2": "Connect legacy systems and modern tools in one place",
+    "item3": "Automate workflows and reduce manual work",
+    "item4": "Single source of truth for data and reporting",
+    "item5": "Scale without adding complexity"
+  },
+  "testimonials": {
+    "srTitle": "What teams say about Aly",
+    "quote1": "Finally, one place for our operations. We scaled without the usual chaos.",
+    "attribution1": "Operations lead, B2B SaaS",
+    "quote2": "We connected legacy ERP and modern tools in weeks, not months.",
+    "attribution2": "CTO, mid-market"
+  },
+  "cta": {
+    "headline": "Start running your operations on one modern platform.",
+    "button": "Request Demo"
+  },
+  "footer": {
+    "product": "Product",
+    "features": "Features",
+    "integrations": "Integrations",
+    "company": "Company",
+    "about": "About",
+    "careers": "Careers",
+    "contact": "Contact",
+    "documentation": "Documentation",
+    "blog": "Blog",
+    "support": "Support",
+    "resources": "Resources",
+    "privacy": "Privacy",
+    "terms": "Terms",
+    "legal": "Legal",
+    "copyright": "Aly Software. All rights reserved."
+  }
+}

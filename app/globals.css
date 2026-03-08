@@ -26,7 +26,7 @@ button:focus-visible {
   outline: none;
   box-shadow: 0 0 0 2px var(--background), 0 0 0 4px var(--foreground);
 }
-/* Skip link: visible on focus for keyboard users */
+/* Skip link: hidden until focused. Route change blurs it so it doesn’t stay visible after nav. */
 .skip-link {
   position: absolute;
   width: 1px;
@@ -55,8 +55,6 @@ button:focus-visible {
   border-radius: 9999px;
   font-weight: 500;
   box-shadow: 0 0 0 2px var(--background), 0 0 0 4px var(--foreground);
-}
-.skip-link:focus {
   outline: none;
 }
 

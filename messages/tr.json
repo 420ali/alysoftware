@@ -1,0 +1,88 @@
+{
+  "nav": {
+    "product": "Ürün",
+    "features": "Özellikler",
+    "integrations": "Entegrasyonlar",
+    "company": "Şirket",
+    "requestDemo": "Demo Talep Et"
+  },
+  "hero": {
+    "titleLine1": "Modern İş Operasyonları İçin",
+    "titleLine2": " İşletim Sistemi",
+    "subtitle": "Sistemleri bağlayın. İş akışlarını otomatikleştirin. Daha hızlı ölçeklenin.",
+    "requestDemo": "Demo Talep Et",
+    "seeHowItWorks": "Nasıl Çalışır?"
+  },
+  "problem": {
+    "item1Title": "Parçalı araçlar",
+    "item1Desc": "Veriler onlarca uygulamaya dağılmış. Tek bir doğru kaynak yok.",
+    "item2Title": "Katı eski sistemler",
+    "item2Desc": "Bugün nasıl çalıştığınıza uyum sağlayamayan monolitik sistemler.",
+    "item3Title": "Manuel iş",
+    "item3Desc": "Büyümeyi yavaşlatan ve ekipleri tüketen tekrarlayan işler."
+  },
+  "products": {
+    "title": "Ürünler",
+    "crmName": "CRM",
+    "crmDesc": "İlişkiler ve pipeline tek yerde. Her müşteri için tek doğru kaynak.",
+    "salesName": "Satış",
+    "salesDesc": "Anlaşmalar, teklifler ve tahmin. Daha az manuel işle daha fazla kapatın.",
+    "billingName": "Faturalandırma",
+    "billingDesc": "Faturalama ve gelir tanıma. Daha hızlı tahsil edin, doğru raporlayın.",
+    "automationName": "Otomasyon",
+    "automationDesc": "Siz olmadan çalışan iş akışları. Adımları bağlayın, tıkanıklıkları kaldırın.",
+    "integrationsName": "Entegrasyonlar",
+    "integrationsDesc": "Her sistemi, her API'yi bağlayın. Yığınınız senkron kalır.",
+    "analyticsName": "Analitik",
+    "analyticsDesc": "Operasyonlarda tek doğru kaynak. Önemli olanı tek yerde görün."
+  },
+  "architecture": {
+    "title": "Nasıl çalışır",
+    "subtitle": "Tek birleşik operasyon platformuna üç adım.",
+    "step1Title": "Bağlayın",
+    "step1Desc": "Mevcut sistemlerinizi ve verilerinizi tek bir yere getirin.",
+    "step2Title": "Birleştirin",
+    "step2Desc": "Tek bir operasyon katmanı. Silo veya çift veri yok.",
+    "step3Title": "Otomatikleştirin",
+    "step3Desc": "Sizinle ölçeklenen ve manuel adım gerektirmeyen iş akışları.",
+    "diagramLegacy": "ERP · CRM · Eski sistemler",
+    "diagramAly": "Aly",
+    "diagramUnified": "Tek birleşik katman"
+  },
+  "benefits": {
+    "title": "Temel faydalar",
+    "item1": "CRM, satış, faturalandırma ve operasyonlar için tek platform",
+    "item2": "Eski sistemleri ve modern araçları tek yerde bağlayın",
+    "item3": "İş akışlarını otomatikleştirin ve manuel işi azaltın",
+    "item4": "Veri ve raporlama için tek doğru kaynak",
+    "item5": "Karmaşıklık eklemeden ölçeklenin"
+  },
+  "testimonials": {
+    "srTitle": "Ekipler Aly hakkında ne diyor",
+    "quote1": "Sonunda operasyonlarımız için tek bir yer. Olağan kaos olmadan ölçeklendik.",
+    "attribution1": "Operasyon lideri, B2B SaaS",
+    "quote2": "Eski ERP ve modern araçları haftalar içinde, aylar içinde değil bağladık.",
+    "attribution2": "CTO, orta ölçek"
+  },
+  "cta": {
+    "headline": "Operasyonlarınızı tek bir modern platformda çalıştırmaya başlayın.",
+    "button": "Demo Talep Et"
+  },
+  "footer": {
+    "product": "Ürün",
+    "features": "Özellikler",
+    "integrations": "Entegrasyonlar",
+    "company": "Şirket",
+    "about": "Hakkımızda",
+    "careers": "Kariyer",
+    "contact": "İletişim",
+    "documentation": "Dokümantasyon",
+    "blog": "Blog",
+    "support": "Destek",
+    "resources": "Kaynaklar",
+    "privacy": "Gizlilik",
+    "terms": "Koşullar",
+    "legal": "Yasal",
+    "copyright": "Aly Software. Tüm hakları saklıdır."
+  }
+}

@@ -1,6 +1,6 @@
+import SkipToMain from "@/components/SkipToMain";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
-import BigStatement from "@/components/BigStatement";
 import Problem from "@/components/Problem";
 import Products from "@/components/Products";
 import Architecture from "@/components/Architecture";
@@ -12,13 +12,10 @@ import Footer from "@/components/Footer";
 export default function Home() {
   return (
     <>
-      <a href="#main-content" className="skip-link">
-        Skip to main content
-      </a>
+      <SkipToMain />
       <main id="main-content">
         <Navbar />
         <Hero />
-        <BigStatement />
         <Problem />
         <Products />
         <Architecture />
