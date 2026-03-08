@@ -1,7 +1,7 @@
 const productLinks = [
-  { label: "Product", href: "#product" },
-  { label: "Architecture", href: "#architecture" },
-  { label: "Modules", href: "#modules" },
+  { label: "Product", href: "#products" },
+  { label: "Features", href: "#features" },
+  { label: "Integrations", href: "#integrations" },
 ];
 
 const companyLinks = [

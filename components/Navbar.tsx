@@ -3,9 +3,9 @@
 import { useState, useEffect } from "react";
 
 const navLinks = [
-  { label: "Product", href: "#product" },
-  { label: "Architecture", href: "#architecture" },
-  { label: "Modules", href: "#modules" },
+  { label: "Product", href: "#products" },
+  { label: "Features", href: "#features" },
+  { label: "Integrations", href: "#integrations" },
   { label: "Company", href: "#company" },
 ];
 

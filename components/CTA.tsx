@@ -1,9 +1,9 @@
 export default function CTA() {
   return (
-    <section id="demo" className="py-32 md:py-40">
+    <section id="demo" className="py-20 sm:py-28 md:py-36 lg:py-40">
       <div className="mx-auto max-w-content px-6 text-center">
-        <h2 className="text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight text-[var(--foreground)] max-w-3xl mx-auto">
-          Run your operations on one modern platform.
+        <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight text-[var(--foreground)] max-w-3xl mx-auto leading-tight">
+          Start running your operations on one modern platform.
         </h2>
         <a
           href="#demo"

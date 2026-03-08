@@ -2,9 +2,10 @@ import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import BigStatement from "@/components/BigStatement";
 import Problem from "@/components/Problem";
-import Solution from "@/components/Solution";
+import Products from "@/components/Products";
 import Architecture from "@/components/Architecture";
-import Modules from "@/components/Modules";
+import Benefits from "@/components/Benefits";
+import Testimonials from "@/components/Testimonials";
 import CTA from "@/components/CTA";
 import Footer from "@/components/Footer";
 
@@ -16,13 +17,14 @@ export default function Home() {
       </a>
       <main id="main-content">
         <Navbar />
-      <Hero />
-      <BigStatement />
-      <Problem />
-      <Solution />
-      <Architecture />
-      <Modules />
-      <CTA />
+        <Hero />
+        <BigStatement />
+        <Problem />
+        <Products />
+        <Architecture />
+        <Benefits />
+        <Testimonials />
+        <CTA />
         <Footer />
       </main>
     </>
